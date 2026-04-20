@@ -21,7 +21,6 @@ jobs:
       - name: Start SUT
         run: |
           java -jar ./artifacts/app-ibank.jar -P:profile=test &
-          sleep 15
 
       - name: Run tests
         run: ./gradlew test --info -Dselenide.headless=true -Dselenide.baseUrl=http://localhost:9999
